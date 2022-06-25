@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:tools="http://schemas.android.com/tools"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/textPustaka"
+            android:textSize="20sp"
+            android:text="@string/pustaka" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_below="@+id/textPustaka"
+            tools:listitem="@layout/recyclerview_item"
+            tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/btn_add_kata"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/tambah_kata"
+                android:layout_below="@+id/recyclerview"
+                ></Button>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            tools:listitem="@layout/recyclerview_item"
+            android:layout_below="@+id/btn_add_kata"
+            tools:ignore="MissingConstraints" />
+
+    </RelativeLayout>
+</ScrollView>
